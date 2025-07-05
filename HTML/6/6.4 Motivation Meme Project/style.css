@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.poster {
+    font-family: "Caveat",cursive;
+    color: white;
+    margin-top: 20vh;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.motivation-img {
+    border: 5px solid white;
+    width: 70vw;
+}

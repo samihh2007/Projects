@@ -1,0 +1,13 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 0,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "mohd-akram.vscode-html-format",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "notebook.defaultFormatter": "mohd-akram.vscode-html-format",
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
+}
