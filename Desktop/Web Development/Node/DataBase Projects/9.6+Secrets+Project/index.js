@@ -11,7 +11,6 @@ import env from "dotenv";
 const app = express();
 const port = 3000;
 const saltRounds = 10;
-env.config();
 
 app.use(
   session({
@@ -26,6 +25,7 @@ app.use(express.static("public"));
 app.use(passport.initialize());
 app.use(passport.session());
 
+env.config();
 const db = new pg.Client({
   user: process.env.PG_USER,
   host: process.env.PG_HOST,

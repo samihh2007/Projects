@@ -5,6 +5,7 @@ import bcrypt from "bcrypt";
 import session from "express-session"
 import passport from "passport";
 import { Strategy } from "passport-local";
+import env from "dotenv"
 
 const app = express();
 const port = 3000;
@@ -26,14 +27,14 @@ app.use(passport.session());
 
 
 
+env.config();
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "authentication",
-  password: "123456",
-  port: 5432,
+  user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: process.env.PG_PORT,
 });
-db.connect();
 
 app.get("/", (req, res) => {
   res.render("home.ejs");
